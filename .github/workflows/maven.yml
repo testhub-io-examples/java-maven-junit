@@ -26,7 +26,7 @@ jobs:
       run: mvn test --file pom.xml 
 
     - name: Upload test results
-      id: hello
+      if: always()      
       uses: testhub-io/testhub-io.action@23ca62b3e6a8ea7785011ec0fad0a2cbea9eb526
       with:        
         test_result_pattern: "/target/surefire-reports/**/*.xml"
