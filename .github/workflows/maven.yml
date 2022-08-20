@@ -27,7 +27,7 @@ jobs:
 
     - name: Upload test results
       if: always()      
-      uses: testhub-io/testhub-io.action@929d959ea3d352af2dfd3786544f9b274cffb8fd
+      uses: testhub-io/testhub-io.action@1991b521f9239503bb84e3e275c4e089392cf418
       with:        
         test_result_pattern: "/target/surefire-reports/**/*.xml"
         test_coverage_pattern: "/target/site/jacoco/jacoco.xml"
