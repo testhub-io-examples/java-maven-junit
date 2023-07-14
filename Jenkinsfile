@@ -1,13 +1,7 @@
 velopipeline {
   agent any
   
-    stages ('variables'){
-      steps {
-         sh '''#!/bin/bash 
-               echo ${BRANCH_NAME}
-               echo ${GIT_BRANCH}'''
-      }
-    }
+
 
     stage('Git CheckOut') {
       steps {
