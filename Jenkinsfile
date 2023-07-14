@@ -1,15 +1,13 @@
 velopipeline {
   agent any
   
-
-
     stage('Git CheckOut') {
+      agent any
       steps {
         git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: 'develop')
         echo 'CheckOut realizado con exito'
       }
     }
-    
 
     stage('Build') {
       steps {
