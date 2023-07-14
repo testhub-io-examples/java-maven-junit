@@ -9,6 +9,15 @@ pipeline {
       }
     }
 
+    stage('Funcional Tests') {
+      steps {
+        sh '''#!/bin/bash          
+          echo ${GIT_BRANCH}
+          echo ${BRANCH_NAME}'''
+        echo 'scripts funcionales ejecutados exitosamente'
+      }
+    }
+
     stage('Build') {
       steps {
         sh 'mvn clean install -U'
