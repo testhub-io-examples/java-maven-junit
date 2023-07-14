@@ -4,7 +4,7 @@ pipeline {
     stage('Git CheckOut') {
       agent any
       steps {
-        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: ${GIT_BRANCH})
+        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: ${BRANCH_NAME})
         echo 'CheckOut realizado con exito'
       }
     }
@@ -49,7 +49,7 @@ pipeline {
         -Dsonar.projectKey=${SONAR_KEY} \
         -Dsonar.projectName=${SONAR_KEY} \
         -Dsonar.sources=src/main \
-        -Dsonar.branch.name=${GIT_BRANCH} \
+        -Dsonar.branch.name=${BRANCH_NAME} \
         -Dsonar.host.url=${SONAR_SERVER} \
         -Dsonar.login=${SONAR_TOKEN}"
         
