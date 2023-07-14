@@ -1,13 +1,20 @@
 pipeline {
   agent any
-  stages {
-    stage('Git CheckOut') {
-      agent any
+  
+    stages ('variables'){
       steps {
-        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: ${BRANCH_NAME})
+         sh '''echo ${BRANCH_NAME}
+               echo ${GIT_BRANCH}'''
+      }
+    }
+
+    stage('Git CheckOut') {
+      steps {
+        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: '${BRANCH_NAME}')
         echo 'CheckOut realizado con exito'
       }
     }
+    
 
     stage('Build') {
       steps {
