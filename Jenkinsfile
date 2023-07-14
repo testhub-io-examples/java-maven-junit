@@ -32,25 +32,6 @@ pipeline {
       }
     }
     
-/*
-    stage('SonarQube Scan') {
-      steps {
-        checkout scm
-        sh "sonar-scanner \
-                -Dsonar.projectKey=${SONAR_KEY} \
-                -Dsonar.host.url=${SONAR_SERVER} \
-                -Dsonar.login=${SONAR_TOKEN} \
-                -Dsonar.sources=src/main \
-                -Dsonar.tests=src/test \
-                -Dsonar.java.binaries=target/test-classes \
-                -Dsonar.test.inclusions=src/test \
-                -Dsonar.java.source=8 \
-                -Dsonar.sourceEncoding=UTF-8 \
-                -Dsonar.exclusions=*.properties"
-        echo 'Scaneo Exitoso'
-      }
-    } */
-
     stage('SonarQube Scan') {
       steps {
         checkout scm
@@ -59,7 +40,8 @@ pipeline {
         -Dsonar.projectName=${SONAR_KEY} \
         -Dsonar.sources=src/main \
         -Dsonar.host.url=${SONAR_SERVER} \
-        -Dsonar.login=${SONAR_TOKEN}"
+        -Dsonar.login=${SONAR_TOKEN} \
+        -Dsonar.branch.name=${BRANCH_NAME}"
         
         echo 'Scaneo Exitoso'
       }
