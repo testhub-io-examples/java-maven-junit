@@ -1,4 +1,4 @@
-pipeline {
+velopipeline {
   agent any
   
     stages ('variables'){
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Git CheckOut') {
       steps {
-        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: '${BRANCH_NAME}')
+        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: 'develop')
         echo 'CheckOut realizado con exito'
       }
     }
