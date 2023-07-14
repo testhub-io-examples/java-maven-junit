@@ -1,6 +1,6 @@
-velopipeline {
+pipeline {
   agent any
-  
+  stages {
     stage('Git CheckOut') {
       agent any
       steps {
