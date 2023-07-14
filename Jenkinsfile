@@ -4,7 +4,7 @@ pipeline {
     stage('Git CheckOut') {
       agent any
       steps {
-        git(url: 'https://github.com/fidelrodriguezjaimez/project-test-github-main.git', branch: 'develop')
+        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: 'develop')
         echo 'CheckOut realizado con exito'
       }
     }
