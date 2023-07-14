@@ -3,7 +3,8 @@ pipeline {
   
     stages ('variables'){
       steps {
-         sh '''echo ${BRANCH_NAME}
+         sh '''#!/bin/bash 
+               echo ${BRANCH_NAME}
                echo ${GIT_BRANCH}'''
       }
     }
