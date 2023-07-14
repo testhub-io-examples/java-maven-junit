@@ -9,7 +9,7 @@ pipeline {
       }
     }
 
-    stage('Funcional Tests') {
+    stage('variables') {
       steps {
         sh '''#!/bin/bash          
           echo ${GIT_BRANCH}
