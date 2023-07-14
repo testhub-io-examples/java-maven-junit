@@ -15,16 +15,15 @@ pipeline {
         echo 'Compilacion exitosa'
       }
     }
-
-    /*
+    
     stage('Test') {
       steps {
-        sh 'mvn clean test jacoco:report'
+        sh 'mvn test'
         echo 'Pruebas unitarias exitosas'
       }
     }
     
-
+/*
     stage('SonarQube Scan') {
       steps {
         checkout scm
