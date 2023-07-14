@@ -4,7 +4,7 @@ pipeline {
     stage('Git CheckOut') {
       agent any
       steps {
-        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: ${GIT_BRANCH})
+        git(url: 'https://github.com/fidelrodriguezjaimez/java-maven-junit.git', branch: '${NAME_BRANCH}')
         echo 'CheckOut realizado con exito'
       }
     }
@@ -125,6 +125,7 @@ pipeline {
     HARBOR_URL = 'demo.goharbor.io'
     HARBOR_USERNAME = 'fidel.rodriguez'
     HARBOR_PASSWORD = credentials('harborpas-secret')
+    NAME_BRANCH = '${GIT_BRANCH}'
   }
   post {
     success {
