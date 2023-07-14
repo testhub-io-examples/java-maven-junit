@@ -49,7 +49,6 @@ velopipeline {
         -Dsonar.projectKey=${SONAR_KEY} \
         -Dsonar.projectName=${SONAR_KEY} \
         -Dsonar.sources=src/main \
-        -Dsonar.branch.name=${BRANCH_NAME} \
         -Dsonar.host.url=${SONAR_SERVER} \
         -Dsonar.login=${SONAR_TOKEN}"
         
