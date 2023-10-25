@@ -111,14 +111,4 @@ object BuildFromMetaRunner : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
-
-    steps {
-        step {
-            name = "Step from Meta Runner"
-            id = "Step_from_Meta_Runner"
-            type = "JavaMavenJunit_Build"
-            executionMode = BuildStep.ExecutionMode.DEFAULT
-            param("teamcity.step.phase", "")
-        }
-    }
 })
