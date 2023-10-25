@@ -107,4 +107,8 @@ object Build : BuildType({
 
 object BuildFromMetaRunner : BuildType({
     name = "Build from Meta Runner"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
