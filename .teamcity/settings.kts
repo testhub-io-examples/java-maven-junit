@@ -114,6 +114,7 @@ object BuildFromMetaRunner : BuildType({
 
     steps {
         step {
+            name = "Meta-runner Maven step"
             id = "JavaMavenJunit_Build"
             type = "JavaMavenJunit_Build"
             executionMode = BuildStep.ExecutionMode.DEFAULT
