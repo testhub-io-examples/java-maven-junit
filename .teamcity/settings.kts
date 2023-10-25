@@ -111,4 +111,13 @@ object BuildFromMetaRunner : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+
+    steps {
+        step {
+            id = "JavaMavenJunit_Build"
+            type = "JavaMavenJunit_Build"
+            executionMode = BuildStep.ExecutionMode.DEFAULT
+            param("teamcity.step.phase", "")
+        }
+    }
 })
