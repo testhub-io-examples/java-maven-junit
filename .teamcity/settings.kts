@@ -86,8 +86,8 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
         maven {
-            name = "New build step (1)"
-            id = "Maven2_1"
+            name = "New build step (Edited)"
+            id = "Maven_New_Step"
             goals = "clean test"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
