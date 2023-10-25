@@ -121,7 +121,7 @@ object BuildFromMetaRunner : BuildType({
             param("teamcity.step.phase", "")
         }
         step {
-            name = "New build step"
+            name = "The second Maven"
             id = "JavaMavenJunit_Build_New"
             type = "JavaMavenJunit_Build"
             executionMode = BuildStep.ExecutionMode.DEFAULT
