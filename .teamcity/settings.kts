@@ -31,6 +31,7 @@ version = "2023.05"
 
 project {
 
+    buildType(BuildFromMetaRunner)
     buildType(Build)
 
     features {
@@ -102,4 +103,8 @@ object Build : BuildType({
         perfmon {
         }
     }
+})
+
+object BuildFromMetaRunner : BuildType({
+    name = "Build from Meta Runner"
 })
