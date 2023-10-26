@@ -125,6 +125,12 @@ object Build : BuildType({
         perfmon {
         }
     }
+
+    dependencies {
+        snapshot(BuildFromMetaRunner) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
 
 object BuildFromMetaRunner : BuildType({
