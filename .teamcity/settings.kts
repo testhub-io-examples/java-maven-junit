@@ -103,6 +103,12 @@ object Build : BuildType({
         perfmon {
         }
     }
+
+    dependencies {
+        snapshot(AbsoluteId("SimpleMavenProjectWithTests_Build")) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
 
 object BuildFromMetaRunner : BuildType({
