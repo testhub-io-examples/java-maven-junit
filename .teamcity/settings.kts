@@ -127,6 +127,12 @@ object Build : BuildType({
     }
 
     dependencies {
+        snapshot(AbsoluteId("BookingApiPayconiq_Build")) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+        snapshot(AbsoluteId("JavaMavenDemo_Build")) {
+            reuseBuilds = ReuseBuilds.NO
+        }
         snapshot(AbsoluteId("SimpleMavenProjectWithTests_Build")) {
             reuseBuilds = ReuseBuilds.NO
         }
