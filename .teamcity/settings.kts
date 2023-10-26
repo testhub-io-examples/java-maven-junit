@@ -136,6 +136,8 @@ object Build : BuildType({
 object BuildFromMetaRunner : BuildType({
     name = "Build from Meta Runner"
 
+    artifactRules = "**/* => artifacts_meta.zip"
+
     vcs {
         root(DslContext.settingsRoot)
     }
