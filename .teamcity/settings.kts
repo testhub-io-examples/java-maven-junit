@@ -74,6 +74,7 @@ project {
 
     cleanup {
         keepRule {
+            disabled = true
             id = "KEEP_RULE_1"
             keepAtLeast = builds(1)
             dataToKeep = everything()
@@ -81,6 +82,7 @@ project {
             preserveArtifactsDependencies = true
         }
         keepRule {
+            disabled = true
             id = "KEEP_RULE_2"
             keepAtLeast = builds(1)
             dataToKeep = everything()
