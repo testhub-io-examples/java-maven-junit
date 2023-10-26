@@ -76,6 +76,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "**/* => sources_main.zip"
+
     vcs {
         root(DslContext.settingsRoot)
     }
