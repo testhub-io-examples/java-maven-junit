@@ -71,6 +71,12 @@ project {
             }
         }
     }
+
+    cleanup {
+        baseRule {
+            preventDependencyCleanup = true
+        }
+    }
 }
 
 object Build : BuildType({
