@@ -73,6 +73,13 @@ project {
     }
 
     cleanup {
+        keepRule {
+            id = "KEEP_RULE_1"
+            keepAtLeast = builds(1)
+            dataToKeep = everything()
+            applyPerEachBranch = true
+            preserveArtifactsDependencies = true
+        }
         baseRule {
             preventDependencyCleanup = true
         }
