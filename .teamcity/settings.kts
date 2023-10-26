@@ -80,6 +80,13 @@ project {
             applyPerEachBranch = true
             preserveArtifactsDependencies = true
         }
+        keepRule {
+            id = "KEEP_RULE_2"
+            keepAtLeast = builds(1)
+            dataToKeep = everything()
+            applyPerEachBranch = true
+            preserveArtifactsDependencies = true
+        }
         baseRule {
             preventDependencyCleanup = true
         }
