@@ -3,7 +3,7 @@ Maven, JUnit 5 + JaCoCo example.
 
 Project Link - https://www.mkyong.com/maven/maven-jacoco-code-coverage-example/
 
-## How to run this project?
+## How to run this project (with tests)?
 ```
 
 $ git clone https://github.com/mkyong/maven-examples.git
