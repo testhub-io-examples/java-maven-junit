@@ -1,5 +1,5 @@
 # Maven – JaCoCo code coverage example
-Maven, JUnit 5 + JaCoCo example.
+Maven, JUnit + JaCoCo example.
 
 Project Link - https://www.mkyong.com/maven/maven-jacoco-code-coverage-example/
 
