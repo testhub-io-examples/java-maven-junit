@@ -10,5 +10,5 @@ $ git clone https://github.com/mkyong/maven-examples.git
 $ cd maven-code-coverage
 $ mvn clean test
 
-# view report at 'target/site/jacoco/index.html'
+# View report at 'target/site/jacoco/index.html'
 ```
