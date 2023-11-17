@@ -85,10 +85,6 @@ object ThirdBuildFromTheTemplate : BuildType({
     features {
         matrix {
             id = "matrix"
-            param("custom_param", listOf(
-                value("param_5"),
-                value("param_6")
-            ))
             param("parameter_OS", listOf(
                 value("OS_Linux"),
                 value("OS_MacOS")
