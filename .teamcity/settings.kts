@@ -71,6 +71,8 @@ project {
 object Build : BuildType({
     templates(BuildConfigurationWithPrAndMatrix)
     name = "Build"
+
+    artifactRules = "**/*=>sources.zip"
 })
 
 object SecondBuildFromTemplate : BuildType({
