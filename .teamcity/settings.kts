@@ -39,7 +39,7 @@ project {
             id = "PROJECT_EXT_11"
             name = "Docker Registry"
             userName = "dariakrup"
-            password = "credentialsJSON:152d4ec0-eb8d-4fb2-8fa5-bd9d0b0546d2"
+            password = "credentialsJSON:ebcb4eed-1b24-48a2-b669-42071a1b1c69"
         }
         amazonEC2CloudImage {
             id = "PROJECT_EXT_7"
