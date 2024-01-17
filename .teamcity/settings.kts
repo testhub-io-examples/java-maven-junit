@@ -3,6 +3,7 @@ import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -34,6 +35,12 @@ project {
     buildType(Build)
 
     features {
+        dockerRegistry {
+            id = "PROJECT_EXT_11"
+            name = "Docker Registry"
+            userName = "dariakrup"
+            password = "credentialsJSON:5eaaa46e-7de7-4125-a23b-e8c65bcf7383"
+        }
         amazonEC2CloudImage {
             id = "PROJECT_EXT_7"
             profileId = "amazon-1"
