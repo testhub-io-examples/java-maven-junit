@@ -45,7 +45,7 @@ project {
                 secretAccessKey = "credentialsJSON:ec56aca9-5346-4c26-b964-49b3a9384fc9"
                 stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
             }
-            allowInBuilds = false
+            allowInBuilds = true
         }
         dockerRegistry {
             id = "PROJECT_EXT_11"
