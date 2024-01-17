@@ -3,6 +3,7 @@ import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.projectFeatures.awsConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
@@ -35,6 +36,17 @@ project {
     buildType(Build)
 
     features {
+        awsConnection {
+            id = "AmazonWebServicesAws_2"
+            name = "Amazon Web Services (AWS)"
+            regionName = "eu-west-1"
+            credentialsType = static {
+                accessKeyId = "AKIA5JH2VERVI62P5XDY"
+                secretAccessKey = "credentialsJSON:ec56aca9-5346-4c26-b964-49b3a9384fc9"
+                stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
+            }
+            allowInBuilds = false
+        }
         dockerRegistry {
             id = "PROJECT_EXT_11"
             name = "Docker Registry"
