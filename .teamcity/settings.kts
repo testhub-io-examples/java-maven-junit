@@ -1,7 +1,9 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.projectFeatures.awsConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
@@ -100,6 +102,13 @@ object Build : BuildType({
 
     features {
         perfmon {
+        }
+        pullRequests {
+            vcsRootExtId = "${DslContext.settingsRoot.id}"
+            provider = github {
+                authType = vcsRoot()
+                filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
+            }
         }
     }
 })
