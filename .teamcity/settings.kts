@@ -51,6 +51,7 @@ object Build : BuildType({
               }
             ]
         """.trimIndent(), "enableEditOnError" to "true")
+        text("agentNumber", "21", allowEmpty = true)
         checkbox("check", "")
         text("not_empty_text_parameter", "", label = "Not empty text", description = "Not empty text parameter", display = ParameterDisplay.PROMPT, allowEmpty = false)
         text("regex_text_parameter", "a12", label = "Regex parameter", description = "Regex text parameter", display = ParameterDisplay.HIDDEN,
@@ -58,7 +59,6 @@ object Build : BuildType({
         select("select_parameter", "a1", label = "Selector", description = "Selector with multiple values allowed",
                 allowMultiple = true, valueSeparator = ";",
                 options = listOf("a1" to "1", "a2" to "2", "a5" to "5", "a10" to "10"))
-        text("agentNumber", "21", allowEmpty = true)
     }
 
     vcs {
