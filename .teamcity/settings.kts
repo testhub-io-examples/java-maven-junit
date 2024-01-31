@@ -62,6 +62,9 @@ object Build : BuildType({
                 options = listOf("a1" to "1", "a2" to "2", "a5" to "5", "a10" to "10"))
         hashiCorpVaultParameter {
             name = "remote"
+            label = "Vault"
+            description = "Vault Remote parameter"
+            display = ParameterDisplay.PROMPT
             readOnly = true
             query = "tc/lll"
         }
