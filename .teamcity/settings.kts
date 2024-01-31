@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.remoteParameters.hashiCorpVaultParameter
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -59,6 +60,11 @@ object Build : BuildType({
         select("select_parameter", "a1", label = "Selector", description = "Selector with multiple values allowed",
                 allowMultiple = true, valueSeparator = ";",
                 options = listOf("a1" to "1", "a2" to "2", "a5" to "5", "a10" to "10"))
+        hashiCorpVaultParameter {
+            name = "remote"
+            readOnly = true
+            query = "tc/lll"
+        }
     }
 
     vcs {
