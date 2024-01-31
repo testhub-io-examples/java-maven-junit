@@ -73,6 +73,13 @@ object Build : BuildType({
             query = "secret/path/to!/key"
             namespace = "default"
         }
+        remote("RemoteCustomParameter", display = ParameterDisplay.NORMAL,
+            remoteType = "RemoteCustomType",
+            params = arrayOf(
+                "property" to "query",
+                "default" to "namespace"
+            )
+        )
     }
 
     vcs {
