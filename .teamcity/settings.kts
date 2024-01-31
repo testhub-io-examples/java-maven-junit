@@ -65,13 +65,12 @@ object Build : BuildType({
             readOnly = true
             query = "tc/lll"
         }
-        remote("RemoteCustomParameter", "value", display = ParameterDisplay.NORMAL,
-            remoteType = "custom-remote-parameter",
-            params = arrayOf(
-                "tc/add" to "query",
-                "default" to "namespace"
-            )
-        )
+        remoteCustomParameter {
+            name = "RemoteCustomParameter"
+            value = "val"
+            query = "tc/add"
+            namespace = "default"
+        }
     }
 
     vcs {
