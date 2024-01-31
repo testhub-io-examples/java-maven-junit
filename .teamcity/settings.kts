@@ -66,7 +66,7 @@ object Build : BuildType({
             query = "tc/lll"
         }
         remote("RemoteCustomParameter", "value", display = ParameterDisplay.NORMAL,
-            remoteType = "RemoteCustomType",
+            remoteType = "custom-remote-parameter",
             params = arrayOf(
                 "tc/add" to "query",
                 "default" to "namespace"
