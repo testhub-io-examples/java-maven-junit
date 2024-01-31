@@ -65,12 +65,6 @@ object Build : BuildType({
             readOnly = true
             query = "tc/lll"
         }
-        remoteCustomParameter {
-            name = "RemoteCustomParameter"
-            value = "val"
-            query = "tc/add"
-            namespace = "default"
-        }
     }
 
     vcs {
