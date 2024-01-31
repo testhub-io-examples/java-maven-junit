@@ -68,6 +68,11 @@ object Build : BuildType({
             readOnly = true
             query = "tc/lll"
         }
+        remoteCustomParameter {
+            name = "custom_remote"
+            query = "secret/path/to!/key"
+            namespace = "default"
+        }
     }
 
     vcs {
