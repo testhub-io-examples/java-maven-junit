@@ -31,6 +31,7 @@ project {
     buildType(Build)
     params {
         text("text_parameter", "2")
+        password("password_from_token", "credentialsJSON:100b4946-2581-43a0-adee-c04d38d04be7", readOnly = true)       
     }
 }
 
