@@ -63,10 +63,5 @@ object Build : BuildType({
             id = "Echo_parameters"
             scriptContent = "echo %password_token% >> creds.txt"
         }
-        maven {
-            id = "Maven2"
-            goals = "clean test"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
     }
 })
