@@ -38,7 +38,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = "creds.txt"
+    artifactRules = "text.txt"
     params {
         text("any_text_parameter", "value", label = "Any text", description = "Text parameter with any value", readOnly = true, allowEmpty = true)
         checkbox("checkbox_parameter", "", label = "Checkbox parameter", description = "Parameter with 2 options to choose from", display = ParameterDisplay.PROMPT,
@@ -59,9 +59,9 @@ object Build : BuildType({
 
     steps {
         script {
-            name = "Echo parameters"
-            id = "Echo_parameters"
-            scriptContent = "echo %password_token% >> creds.txt"
+            name = "Echo parameter"
+            id = "Echo_parameter"
+            scriptContent = "echo %root_text% >> text.txt"
         }
     }
 })
