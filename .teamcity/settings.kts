@@ -29,6 +29,9 @@ version = "2023.11"
 project {
 
     buildType(Build)
+    params {
+        text("text_parameter", "2")
+    }
 }
 
 object Build : BuildType({
