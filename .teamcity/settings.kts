@@ -58,15 +58,15 @@ object Build : BuildType({
     }
 
     steps {
-        maven {
-            id = "Maven2"
-            goals = "clean test"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
         script {
             name = "Password parameter"
             id = "Password_parameter"
             scriptContent = "echo %password_token% >> creds.txt"
+        }
+        maven {
+            id = "Maven2"
+            goals = "clean test"
+            runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
     }
 })
