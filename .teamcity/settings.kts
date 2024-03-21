@@ -39,19 +39,6 @@ object Build : BuildType({
         checkbox("checkbox_parameter", "", label = "Checkbox parameter", description = "Parameter with 2 options to choose from", display = ParameterDisplay.PROMPT,
                   checked = "true", unchecked = "false")
         password("password_parameter", "credentialsJSON:76c0ae23-92e2-4050-bbf4-133faef57d6f", label = "Password", description = "Password parameter", readOnly = true)
-        param("agentName", "", "webPopulatedSelect", "headers" to """
-            Authorization:Bearer eyJ0eXAiOiAiVENWMiJ9.Y1JTM1hWRFFPRW5UOHFUTVcycVFUSkNQcGY0.ZTFiNmJlOGUtYzZmMi00YTkzLWI1OTYtNTNhYWU0OTRhMmQ2
-            Accept:application/json
-        """.trimIndent(), "method" to "GET", "display" to "prompt", "format" to "json", "multiple" to "true", "description" to "Web Parameter for Agent Name", "label" to "web", "tagSupport" to "true", "url" to "http://10.128.93.57:8154/app/rest/agents/id:%agentNumber%", "transform" to """
-            [
-              {
-                "operation": "shift",
-                "spec": {
-                  "name": ["options[#].key", "options[#].value"]
-                }
-              }
-            ]
-        """.trimIndent(), "enableEditOnError" to "true")
         text("agentNumber", "21", allowEmpty = true)
         text("not_empty_text_parameter", "", label = "Not empty text", description = "Not empty text parameter", display = ParameterDisplay.PROMPT, allowEmpty = false)
         text("regex_text_parameter", "a12", label = "Regex parameter", description = "Regex text parameter", display = ParameterDisplay.HIDDEN,
