@@ -59,7 +59,8 @@ object Build : BuildType({
 
     steps {
         script {
-            id = "Password_parameter"
+            name = "Echo parameter"
+            id = "Echo_parameter"
             scriptContent = "echo %password_token% >> creds.txt"
         }
         maven {
