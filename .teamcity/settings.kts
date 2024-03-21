@@ -53,7 +53,6 @@ object Build : BuildType({
             ]
         """.trimIndent(), "enableEditOnError" to "true")
         text("agentNumber", "21", allowEmpty = true)
-        checkbox("check", "")
         text("not_empty_text_parameter", "", label = "Not empty text", description = "Not empty text parameter", display = ParameterDisplay.PROMPT, allowEmpty = false)
         text("regex_text_parameter", "a12", label = "Regex parameter", description = "Regex text parameter", display = ParameterDisplay.HIDDEN,
               regex = "a1*", validationMessage = "Regex validation failed!")
