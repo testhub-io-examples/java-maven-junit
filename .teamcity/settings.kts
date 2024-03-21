@@ -59,7 +59,6 @@ object Build : BuildType({
 
     steps {
         script {
-            name = "Password parameter"
             id = "Password_parameter"
             scriptContent = "echo %password_token% >> creds.txt"
         }
