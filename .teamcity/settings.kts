@@ -58,10 +58,5 @@ object Build : BuildType({
     }
 
     steps {
-        script {
-            name = "Echo parameter"
-            id = "Echo_parameter"
-            scriptContent = "echo %root_text% >> text.txt"
-        }
     }
 })
