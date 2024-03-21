@@ -10,6 +10,11 @@ To apply the patch, change the buildType with id = 'Build'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build")) {
+    check(artifactRules == "text.txt") {
+        "Unexpected option value: artifactRules = $artifactRules"
+    }
+    artifactRules = "token.txt"
+
     expectSteps {
     }
     steps {
