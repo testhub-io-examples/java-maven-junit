@@ -12,6 +12,9 @@ accordingly, and delete the patch script.
 changeProject(DslContext.projectId) {
     params {
         add {
+            param("docker_version", "%docker.version%")
+        }
+        add {
             param("maven_used", "%teamcity.tool.maven.DEFAULT%")
         }
     }
