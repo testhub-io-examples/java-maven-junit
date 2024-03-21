@@ -31,12 +31,14 @@ project {
     buildType(Build)
     params {
         text("text_parameter", "2")      
+        password("password_token", "credentialsJSON:99e25682-7bac-41fa-b7df-1ca76cdf8720", readOnly = true)
     }
 }
 
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "creds.txt"
     params {
         text("any_text_parameter", "value", label = "Any text", description = "Text parameter with any value", readOnly = true, allowEmpty = true)
         checkbox("checkbox_parameter", "", label = "Checkbox parameter", description = "Parameter with 2 options to choose from", display = ParameterDisplay.PROMPT,
@@ -60,6 +62,11 @@ object Build : BuildType({
             id = "Maven2"
             goals = "clean test"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
+        }
+        script {
+            name = "Password parameter"
+            id = "Password_parameter"
+            scriptContent = "echo %password_token% >> creds.txt"
         }
     }
 })
