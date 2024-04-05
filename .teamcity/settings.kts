@@ -44,6 +44,10 @@ object Build : BuildType({
             id = "Maven2"
             goals = "clean test"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
+            mavenVersion = custom {
+                path = "%teamcity.tool.maven.3.6.0%"
+            }
+            dockerImage = "maven:3.6.0-jdk-11"
         }
     }
 
