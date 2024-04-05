@@ -15,6 +15,7 @@ public class TestMessageBuilder {
     }
 
     @Test
+    @DisplayName("Null:Name:Test")
     public void testNameEmpty() {
 
         MessageBuilder obj = new MessageBuilder();
@@ -23,6 +24,7 @@ public class TestMessageBuilder {
     }
 
     @Test
+    @DisplayName("Null.Name.Test")
     public void testNameNull() {
 
         MessageBuilder obj = new MessageBuilder();
