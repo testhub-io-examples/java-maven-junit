@@ -47,7 +47,6 @@ object Build : BuildType({
             mavenVersion = custom {
                 path = "%teamcity.tool.maven.3.6.0%"
             }
-            dockerImage = "maven:3.6.0-jdk-11"
         }
     }
 
